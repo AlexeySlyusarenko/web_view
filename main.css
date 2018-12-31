@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.page {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: green;
+}
+
+.page__viewport {
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page__header {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10, 10, 10, .7);
+}
+@supports ( (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) ) {
+    .page__header {
+        background-color: red;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+.page__section {
+    z-index: 50;
+    width: 100%;
+    height: 500px;
+    font-size: 100px;
+}
+.page__section:nth-child(2n) {
+    background-color: cornflowerblue;
+}
+.page__section:nth-child(2n + 1) {
+    background-color: salmon;
+}
+
+.page__footer {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10, 10, 10, .7);
+}
+@supports ( (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) ) {
+    .page__footer {
+        background-color: blue;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
