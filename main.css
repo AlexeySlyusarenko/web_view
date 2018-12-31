@@ -37,7 +37,6 @@ html, body {
 }
 @supports ( (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) ) {
     .page__header {
-        background-color: red;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
@@ -67,7 +66,6 @@ html, body {
 }
 @supports ( (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) ) {
     .page__footer {
-        background-color: blue;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
     }
