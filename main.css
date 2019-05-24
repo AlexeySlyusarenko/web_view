@@ -27,12 +27,6 @@ html, body {
     height: 100px;
     background-color: red;
 }
-@media (orientation: landscape) {
-    .page__header {
-        width: 100px;
-        height: 100vh;
-    }
-}
 
 .page__main {
     z-index: 50;
@@ -53,10 +47,4 @@ html, body {
     width: 100%;
     height: 100px;
     background-color: purple;
-}
-@media (orientation: landscape) {
-    .page__footer {
-        width: 100px;
-        height: 100vh;
-    }
 }
