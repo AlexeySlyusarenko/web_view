@@ -1,29 +1,21 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    background-color: #000;
+    background-color: grey;
 }
 
 .page {
     z-index: 10;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     background-color: green;
-}
-
-.page__viewport {
-    z-index: 20;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 .page__header {
@@ -31,29 +23,26 @@ html, body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 100px;
-    background-color: rgba(10, 10, 10, .9);
+    background-color: red;
 }
-@supports ( (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) ) {
+@media (orientation: landscape) {
     .page__header {
-        background-color: rgba(10, 10, 10, .7);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        width: 100px;
+        height: 100vh;
     }
 }
 
-.page__section {
+.page__main {
     z-index: 50;
     width: 100%;
     height: 500px;
     font-size: 100px;
-}
-.page__section:nth-child(2n) {
-    background-color: cornflowerblue;
-}
-.page__section:nth-child(2n + 1) {
-    background-color: salmon;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+
 }
 
 .page__footer {
@@ -63,12 +52,11 @@ html, body {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: rgba(10, 10, 10, .9);
+    background-color: purple;
 }
-@supports ( (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) ) {
+@media (orientation: landscape) {
     .page__footer {
-        background-color: rgba(10, 10, 10, .7);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        width: 100px;
+        height: 100vh;
     }
 }
